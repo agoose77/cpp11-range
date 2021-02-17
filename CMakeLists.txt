@@ -12,7 +12,7 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 # Create target
-add_library(cpp11-range INTERFACE)
+add_library(${PROJECT_NAME} INTERFACE)
 target_include_directories(
   ${PROJECT_NAME} INTERFACE $<INSTALL_INTERFACE:include>
                             $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>)

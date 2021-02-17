@@ -2,5 +2,7 @@
 
 # NB ${CMAKE_CURRENT_LIST_DIR} is evaluated at configure time of 
 # dependencies of this package
-include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+if(NOT TARGET @PROJECT_NAME@::@PROJECT_NAME@)
+  include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+endif()
 check_required_components("@PROJECT_NAME@")
