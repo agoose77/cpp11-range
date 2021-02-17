@@ -52,3 +52,6 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
 # Copy include files to the install include directory
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/${PROJECT_NAME}
         DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
+
+# Add alias to support add_subdirectory
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
